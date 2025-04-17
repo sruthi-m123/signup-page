@@ -1,0 +1,63 @@
+<div class="bgc">
+    <div class="container">
+      <div class="header">
+        <h1><span class="l">R</span>egister</h1>
+        
+      </div>
+
+      <% if (typeof message !== "undefined") { %>
+        <p id="message" style="display:none;"><%= message %></p>
+      <% } %>
+
+
+      <form id="registerForm" action="/user/register" method="POST">
+        
+        <label for="uname">Username</label>
+        <input type="text" class="inp" name="uname" >
+        <label for="email">Email</label>
+        <input id="email" type="email" class="inp" name="email" >
+        
+        <label for="password">Password</label>
+        <input  id="password"type="password" class="inp" name="password" >
+        <label for="cpsw"> Confirm Password</label>
+        <input id="confirmpassword" type="password" class="inp" name="confirmpassword" >
+        <button type="submit">Enter</button>
+      </form>
+     
+    </div>
+  </div> 
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded',function(){
+    
+    const message=document.getElementById('message')?.textContent;
+    if(message){
+        Swal.fire(message)
+    }
+   const form= document.getElementById('registerForm');
+   form.addEventListener('submit', async function(e){
+e.preventDefault();
+
+var uname=document.querySelector('input[name="uname"]').value.trim();        
+var email=document.getElementById('email').value.trim();
+var password= document.getElementById('password').value;
+var confirmpassword=document.getElementById('confirmpassword').value;
+if(!uname||!email||!password||!confirmpassword){
+    Swal.fire("All fields are required");
+    return ;
+}
+ if(password != confirmpassword){
+Swal.fire("password do not match");
+    return;
+}
+if(password.length<6){
+  Swal.fire("Password greater than six")
+  return
+}
+
+// await Swal.fire("Registration Successful!","","success");
+form.submit();
+});
+    });
+
+  </script>

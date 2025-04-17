@@ -1,0 +1,126 @@
+/* Admin Dashboard Styles */
+body {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Navbar Styles */
+  .navbar-brand {
+    font-weight: 600;
+  }
+  
+  .navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  /* Main Content Styles */
+  .main-container {
+    margin-top: 20px;
+  }
+  
+  .section-header {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 0;
+  }
+  
+  /* Form Styles */
+  .form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  .form-control, .inputbox {
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    padding: 10px;
+    transition: border-color 0.3s;
+  }
+  
+  .form-control:focus, .inputbox:focus {
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: 0;
+  }
+  
+  .input-label {
+    font-weight: 500;
+    margin-top: 10px;
+    color: #495057;
+  }
+  
+  /* Table Styles */
+  .table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  
+  .table th {
+    background-color: #f8f9fa;
+  }
+  
+  /* Button Styles */
+  .action-btn {
+    padding: 5px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .action-btn:hover {
+    transform: translateY(-1px);
+  }
+  
+  .btn-add-user {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .btn-add-user:hover {
+    background-color: #218838;
+  }
+  
+  /* Modal Styles */
+  .modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  .modal-footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #dee2e6;
+  }
+  
+  .delete-modal .modal-header {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  /* Search Box */
+  .search-container {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .action-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .action-btn {
+      width: 100%;
+    }
+  }
